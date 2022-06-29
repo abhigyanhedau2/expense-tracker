@@ -1,0 +1,93 @@
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: #4b4b4b;
+    
+    /* Moved to Card.css 
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); */
+}
+
+.expense-item-description {
+    display: flex;
+    flex-direction: column;
+
+    /* The gap property defines the size of the gap between the rows and columns. */
+    /* gap: <row-gap> <column-gap> */
+    gap: 1rem;
+    align-items: flex-end;
+
+    /* The flex-flow property is a shorthand property for the flex-direction and the flex-wrap properties */
+    /* The flex-direction property specifies the direction of the flexible items. */
+    /* The flex-wrap property specifies whether the flexible items should wrap or not. */
+    /* Eg. flex-flow: column nowrap */
+    flex-flow: column-reverse;
+    justify-content: flex-start;
+
+    /* The flex CSS shorthand property sets how a flex item will grow or shrink to fit the space available in its flex container. */
+    flex: 1;
+}
+
+.expense-date {
+    background-color: #000;
+    margin: 10px;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.expense-item-month {
+    font-size: 0.9rem;
+}
+
+.expense-item-year {
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+
+.expense-item-date {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.expense-item-description h2 {
+    color: white;
+    font-size: 1.5rem;
+    flex: 1;   
+    margin: 0 1rem;
+}
+
+.expense-item-price {
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    background-color: #40005d;
+    border: 1px solid #fff;
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+@media (min-width: 580px) {
+    .expense-item-description {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1;
+    }
+
+    .expense-item-description h2 {
+        font-size: 1.5rem;
+    }
+
+    .expense-item-price {
+        font-size: 1.25rem;
+        padding: 0.5rem 1.5rem;
+    }
+}
